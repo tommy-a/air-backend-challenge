@@ -1,0 +1,21 @@
+{
+    "name": "air-backend-challenge",
+    "author": "Tommy Anderson",
+    "scripts": {
+        "main": "ts-node-dev ./src/main.ts"
+    },
+    "dependencies": {
+        "koa": "2.13.0",
+        "koa-body": "4.2.0",
+        "koa-router": "10.0.0"
+    },
+    "devDependencies": {
+        "@types/koa": "2.11.6",
+        "@types/koa-router": "7.4.1",
+        "@types/node": "14.14.9",
+        "ts-node-dev": "1.0.0",
+        "tslint": "5.20.1",
+        "tslint-microsoft-contrib": "6.2.0",
+        "typescript": "4.1.2"
+    }
+}

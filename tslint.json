@@ -1,0 +1,43 @@
+{
+    "rulesDirectory": [
+        "tslint-microsoft-contrib"
+    ],
+    "defaultSeverity": "warning",
+    "extends": [
+        "tslint-microsoft-contrib"
+    ],
+    "rules": {
+        "completed-docs": false,
+        "cyclomatic-complexity": false,
+        "export-name": false,
+        "function-name": false,
+        "member-access": false,
+        "missing-jsdoc": false,
+        "interface-name": false,
+        "match-default-export-name": false,
+        "newline-before-return": false,
+        "newline-per-chained-call": false,
+        "no-constant-condition": false,
+        "no-implicit-dependencies": [
+            true,
+            "dev"
+        ],
+        "no-increment-decrement": false,
+        "no-parameter-properties": false,
+        "no-relative-imports": false,
+        "no-suspicious-comment": false,
+        "object-literal-key-quotes": false,
+        "prefer-type-cast": false,
+        "strict-boolean-expressions": false,
+        "typedef": [
+            true,
+            "parameter",
+            "property-declaration",
+            "member-variable-declaration"
+        ],
+        "variable-name": [
+            true,
+            "allow-pascal-case"
+        ]
+    }
+}
