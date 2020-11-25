@@ -17,6 +17,7 @@
         "match-default-export-name": false,
         "newline-before-return": false,
         "newline-per-chained-call": false,
+        "no-backbone-get-set-outside-model": false,
         "no-constant-condition": false,
         "no-implicit-dependencies": [
             true,
@@ -26,6 +27,7 @@
         "no-parameter-properties": false,
         "no-relative-imports": false,
         "no-suspicious-comment": false,
+        "non-literal-fs-path": false,
         "object-literal-key-quotes": false,
         "prefer-type-cast": false,
         "strict-boolean-expressions": false,
@@ -35,9 +37,6 @@
             "property-declaration",
             "member-variable-declaration"
         ],
-        "variable-name": [
-            true,
-            "allow-pascal-case"
-        ]
+        "variable-name": false
     }
 }
