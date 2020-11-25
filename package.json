@@ -2,7 +2,7 @@
     "name": "air-backend-challenge",
     "author": "Tommy Anderson",
     "scripts": {
-        "main": "ts-node-dev ./src/main.ts"
+        "start": "ts-node-dev ./src/main.ts"
     },
     "dependencies": {
         "@ffmpeg-installer/ffmpeg": "1.0.20",
@@ -12,7 +12,8 @@
         "koa": "2.13.0",
         "koa-body": "4.2.0",
         "koa-router": "10.0.0",
-        "tmp": "0.2.1"
+        "tmp": "0.2.1",
+        "uuid": "8.3.1"
     },
     "devDependencies": {
         "@types/axios": "0.14.0",
@@ -21,6 +22,7 @@
         "@types/koa-router": "7.4.1",
         "@types/node": "14.14.9",
         "@types/tmp": "0.2.0",
+        "@types/uuid": "8.3.0",
         "ts-node-dev": "1.0.0",
         "tslint": "5.20.1",
         "tslint-microsoft-contrib": "6.2.0",

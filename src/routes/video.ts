@@ -4,6 +4,7 @@ import axios from 'axios';
 import fs from 'fs';
 import Router from 'koa-router';
 import tmp from 'tmp';
+import { v4 as uuidv4 } from 'uuid';
 
 // wrap ffmpeg + ffprobe exe
 import ffmpeg, { FfmpegCommand } from 'fluent-ffmpeg';
@@ -18,6 +19,7 @@ const _video = new Router({ prefix: '/video' });
 
 _video.post('/concatenate', async (ctx) => {
     const { urls } = ctx.request.body as ConcatenateRequest;
+    const outputFile = `${uuidv4()}.mp4`;
 
     // create tmp file for each video src
     const files = await Promise.all(
@@ -44,12 +46,13 @@ _video.post('/concatenate', async (ctx) => {
 
     // output and cleanup tmp files
     mergedFile
-        .mergeToFile('./test.mp4')
+        .mergeToFile(outputFile)
         .on('end', () => {
             files.forEach(f => f.removeCallback);
         });
 
-    // TODO: return file output path
+    ctx.status = 201;
+    ctx.response.body = `${process.cwd()}/${outputFile}`;
 
     return;
 });
